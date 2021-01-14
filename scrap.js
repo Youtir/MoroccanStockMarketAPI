@@ -1,19 +1,9 @@
-import { createServer } from 'http';
 import { createRequire } from 'module';
 const require = createRequire(import.meta.url);
 const puppeteer = require('puppeteer');
 const fs = require('fs');
-import app from './app.js';
-
-const port = process.env.PORT || 3000;
-
-const server = createServer(app);
-
-
-server.listen(port);
-
-setInterval(async function Myscrapper(){
-  const browser = await puppeteer.launch({ headless: true , args: ['--no-sandbox'] });
+(async () => {
+  const browser = await puppeteer.launch({ headless: true });
   const page = await browser.newPage();
   await page.goto("http://www.casablanca-bourse.com/bourseweb/index.aspx", { waitUntil: "networkidle2" });
   await page.setViewport({ width: 1680, height: 920 });
@@ -202,4 +192,4 @@ setInterval(async function Myscrapper(){
   const filename = await "result.json";
   await fs.writeFileSync(filename, artFinal);
   await browser.close();
-}, 900000);
+})();

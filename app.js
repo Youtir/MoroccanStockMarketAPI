@@ -12,19 +12,15 @@ import variationssroutes from './api/routes/variations.js';
 app.use('/variations', variationssroutes);
 app.use('/variations/pfhausses', variationssroutes);
 app.use('/variations/pfbaisses', variationssroutes);
-
 ///////////////////
 import volumeroutes from './api/routes/volume.js';
 app.use('/volume', volumeroutes);
 app.use('/volume/globale', volumeroutes);
 app.use('/volume/top10', volumeroutes);
-
 ///////////////////
 import capitalisationroutes from './api/routes/capitalisation.js';
 app.use('/capitalisation', capitalisationroutes);
 app.use('/capitalisation/globale', capitalisationroutes);
 app.use('/capitalisation/top10', capitalisationroutes);
 ///////////////////
-
-
 export default app;
