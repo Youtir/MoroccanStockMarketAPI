@@ -1,6 +1,11 @@
 import express from 'express';
+import { fileURLToPath } from 'url';
+import { dirname } from 'path';
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 const app = express();
-
+app.get('/',function(req,res){
+    res.sendFile('index.html', { root: __dirname })});
 ///////////////////
 import indicesroutes from './api/routes/indices.js';
 app.use('/indices', indicesroutes);

@@ -1,14 +1,18 @@
 {
-  "name": "restapi",
+  "name": "moroccan-stock-market-scraper",
+  "engines": {
+    "node": "15.5.1"
+  },
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
   "type": "module",
   "scripts": {
+    "start": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "RedaElmar&Youtir",
+  "license": "MIT",
   "dependencies": {
     "axios": "^0.21.1",
     "cheerio": "^1.0.0-rc.5",
