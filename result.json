@@ -1,0 +1,178 @@
+{
+    "indices": [
+        {
+            "name": "MSI20",
+            "cours": "919,89",
+            "lbvar": "-0,43 %",
+            "evolution": "-0,53 %"
+        },
+        {
+            "name": "MASI Flottant",
+            "cours": "11 262,09",
+            "lbvar": "-0,31 %",
+            "evolution": "-0,22 %"
+        },
+        {
+            "name": "Casablanca ESG 10",
+            "cours": "855,28",
+            "lbvar": "-0,43 %",
+            "evolution": "-0,77 %"
+        }
+    ],
+    "variations": {
+        "pfhausses": [
+            {
+                "instrument": "DELATTRE LEVIVIER MAROC",
+                "cours": "38,99",
+                "difference": "1,49",
+                "diff_percent": "3,97 %"
+            },
+            {
+                "instrument": "M2M Group",
+                "cours": "788,00",
+                "difference": "30,00",
+                "diff_percent": "3,96 %"
+            },
+            {
+                "instrument": "LESIEUR CRISTAL",
+                "cours": "171,80",
+                "difference": "6,45",
+                "diff_percent": "3,90 %"
+            },
+            {
+                "instrument": "CARTIER SAADA",
+                "cours": "29,37",
+                "difference": "0,57",
+                "diff_percent": "1,98 %"
+            },
+            {
+                "instrument": "AFMA",
+                "cours": "1 112,00",
+                "difference": "21,00",
+                "diff_percent": "1,92 %"
+            }
+        ],
+        "pfbaisses": [
+            {
+                "instrument": "ENNAKL",
+                "cours": "26,10",
+                "difference": "-0,58",
+                "diff_percent": "-2,17 %"
+            },
+            {
+                "instrument": "MED PAPER",
+                "cours": "13,73",
+                "difference": "-0,29",
+                "diff_percent": "-2,07 %"
+            },
+            {
+                "instrument": "BCP",
+                "cours": "244,05",
+                "difference": "-4,95",
+                "diff_percent": "-1,99 %"
+            },
+            {
+                "instrument": "CDM",
+                "cours": "429,00",
+                "difference": "-8,00",
+                "diff_percent": "-1,83 %"
+            },
+            {
+                "instrument": "DELTA HOLDING",
+                "cours": "33,95",
+                "difference": "-0,63",
+                "diff_percent": "-1,82 %"
+            }
+        ]
+    },
+    "Volume": {
+        "volume global": "30 414 583,71",
+        "Instruments": [
+            {
+                "name": "SONASID",
+                "Valeur": "5 240 142,70"
+            },
+            {
+                "name": "ATTIJARIWAFA BANK",
+                "Valeur": "3 171 340,40"
+            },
+            {
+                "name": "SODEP-Marsa Maroc",
+                "Valeur": "3 149 948,80"
+            },
+            {
+                "name": "ITISSALAT AL-MAGHRIB",
+                "Valeur": "2 567 213,45"
+            },
+            {
+                "name": "COSUMAR",
+                "Valeur": "2 208 818,30"
+            },
+            {
+                "name": "DISWAY",
+                "Valeur": "1 892 771,70"
+            },
+            {
+                "name": "CIMENTS DU MAROC",
+                "Valeur": "1 868 000,00"
+            },
+            {
+                "name": "JET CONTRACTORS",
+                "Valeur": "1 677 769,55"
+            },
+            {
+                "name": "BMCI",
+                "Valeur": "1 603 144,50"
+            },
+            {
+                "name": "TAQA MOROCCO",
+                "Valeur": "1 245 678,00"
+            }
+        ]
+    },
+    "Capitalisation": {
+        "Capitalisation en MAD": "583 396 727 736,38",
+        "Capitalisations": [
+            {
+                "name": "ITISSALAT AL-MAGHRIB",
+                "Valeur": "126 589 728 960,00"
+            },
+            {
+                "name": "ATTIJARIWAFA BANK",
+                "Valeur": "88 980 503 896,00"
+            },
+            {
+                "name": "BCP",
+                "Valeur": "49 360 248 796,80"
+            },
+            {
+                "name": "LAFARGEHOLCIM MAR",
+                "Valeur": "36 787 046 800,00"
+            },
+            {
+                "name": "BANK OF AFRICA",
+                "Valeur": "31 128 846 507,20"
+            },
+            {
+                "name": "CIMENTS DU MAROC",
+                "Valeur": "23 458 506 500,00"
+            },
+            {
+                "name": "TAQA MOROCCO",
+                "Valeur": "21 465 573 220,00"
+            },
+            {
+                "name": "COSUMAR",
+                "Valeur": "20 447 017 745,20"
+            },
+            {
+                "name": "SODEP-Marsa Maroc",
+                "Valeur": "15 706 658 400,00"
+            },
+            {
+                "name": "WAFA ASSURANCE",
+                "Valeur": "13 545 000 000,00"
+            }
+        ]
+    }
+}
