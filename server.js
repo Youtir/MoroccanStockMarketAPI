@@ -34,6 +34,8 @@ var loop = async function(){
         evolution: await page.$eval("span#FrontTabContainer1_ctl00_MasiMadex1_LBVcseEvolution>font", el => el.textContent.trim())
       }
     ];
+    const horodateur = await page.$eval("span#EtatSeance1_LBHeure", el => el.textContent.trim());
+
     await page.click("input#FrontTabContainer1_ctl00_ImageButton2");
     await page.waitForSelector("span#FrontTabContainer1_ctl00_Variation1_FrtesHV1_RptrVarHaut_ctl01_Label1");
     const pfH = [
@@ -191,7 +193,7 @@ var loop = async function(){
         Valeur: await page.$eval("span#FrontTabContainer1_ctl00_Capitalisation1_CinqMeilleurCapital1_RptrBestCapit_ctl10_Label8", el => el.textContent.trim()),
       }
     ];
-    const artFinal = await '{"indices":' + JSON.stringify(indices) + ',"variations":{"pfhausses": ' + JSON.stringify(pfH) + ',"pfbaisses":' + JSON.stringify(pfB) + '},"Volume": {"volume global":' + JSON.stringify(VG) + ',"Instruments":' + JSON.stringify(Ins) + '},"Capitalisation": {"Capitalisation en MAD":' + JSON.stringify(CapG) + ',"Capitalisations":' + JSON.stringify(Cap) + '}}';
+    const artFinal = await '{ "horodateur" :'+ JSON.stringify(horodateur) + ',"indices":' + JSON.stringify(indices) + ',"variations":{"pfhausses": ' + JSON.stringify(pfH) + ',"pfbaisses":' + JSON.stringify(pfB) + '},"Volume": {"volume global":' + JSON.stringify(VG) + ',"Instruments":' + JSON.stringify(Ins) + '},"Capitalisation": {"Capitalisation en MAD":' + JSON.stringify(CapG) + ',"Capitalisations":' + JSON.stringify(Cap) + '}}';
     const filename = await "result.json";
     await fs.writeFileSync(filename, artFinal);
     await browser.close();
@@ -199,6 +201,4 @@ var loop = async function(){
     setTimeout(loop, 900000);
   };
   loop();
-
-
 ;

@@ -7,6 +7,9 @@ const app = express();
 app.get('/',function(req,res){
     res.sendFile('index.html', { root: __dirname })});
 ///////////////////
+import allroutes from './api/routes/all.js';
+app.use('/all', allroutes);
+///////////////////
 import indicesroutes from './api/routes/indices.js';
 app.use('/indices', indicesroutes);
 app.use('/indices/cours', indicesroutes);//with parameter name
