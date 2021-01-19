@@ -2,18 +2,25 @@ import { Router } from 'express';
 import { createRequire } from 'module';
 const require = createRequire(import.meta.url);
 const fs = require('fs');
-
+var cors = require('cors')
+var corsOptions = {
+    "origin": "*",
+    "methods": "GET,HEAD,PUT,PATCH,POST,DELETE",
+    "preflightContinue": false,
+    "optionsSuccessStatus": 200
+  }
+  
 
 
 const router = Router();
 
-router.get('/', (req, res, next) => {
+router.get('/',cors(corsOptions), (req, res, next) => {
   let rawdata = fs.readFileSync('result.json');
   let indices = JSON.parse(rawdata);
   res.status(200).json(indices["indices"]);
 });
 
-router.get('/cours', (req, res) => {
+router.get('/cours',cors(corsOptions), (req, res) => {
   const name = req.query.name
   ;(async () => {
     let rawdata = fs.readFileSync('result.json');
@@ -28,7 +35,7 @@ router.get('/cours', (req, res) => {
     res.status(200).json(founddata);
   })()
 })
-router.get('/lbvar', (req, res) => {
+router.get('/lbvar',cors(corsOptions), (req, res) => {
   const name = req.query.name
   ;(async () => {
     let rawdata = fs.readFileSync('result.json');
@@ -43,7 +50,7 @@ router.get('/lbvar', (req, res) => {
     res.status(200).json(founddata);
   })()
 })
-router.get('/evolution', (req, res) => {
+router.get('/evolution',cors(corsOptions), (req, res) => {
   const name = req.query.name
   ;(async () => {
     let rawdata = fs.readFileSync('result.json');
@@ -59,7 +66,7 @@ router.get('/evolution', (req, res) => {
   })()
 })
 
-router.post('/', (req, res, next) => {
+router.post('/',cors(corsOptions), (req, res, next) => {
   res.status(200).json({
     message: 'Post requests to /indices'
   });

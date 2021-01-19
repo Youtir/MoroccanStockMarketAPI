@@ -1,12 +1,23 @@
 import express from 'express';
 import { fileURLToPath } from 'url';
 import { dirname } from 'path';
+import { createRequire } from 'module';
+const require = createRequire(import.meta.url);
+var cors = require('cors')
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 const app = express();
-app.get('/',function(req,res){
+var corsOptions = {
+    "origin": "*",
+    "methods": "GET,HEAD,PUT,PATCH,POST,DELETE",
+    "preflightContinue": false,
+    "optionsSuccessStatus": 200
+  }
+
+app.get('/', cors(corsOptions),function(req,res){
     res.sendFile('index.html', { root: __dirname })});
-///////////////////
+
+    ///////////////////
 import allroutes from './api/routes/all.js';
 app.use('/all', allroutes);
 ///////////////////
